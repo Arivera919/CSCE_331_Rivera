@@ -1,0 +1,113 @@
+-- Special Query #1: "Weekly Sales History"
+-- pseudocode: select count of orders grouped by week
+-- about: given a specific week, how many orders were placed?
+-- example: "week 1 has 98765 orders"
+SELECT EXTRACT(WEEK FROM dateof) AS week_number, COUNT(orderID) AS order_count
+FROM orders
+WHERE EXTRACT(WEEK FROM dateof) = 2
+GROUP BY EXTRACT(WEEK FROM dateof);
+
+-- Special Query #2: "Realistic Sales History"
+-- pseudocode: select count of orders, sum of order total grouped by hour
+-- about: given a specific hour of the day, how many orders were placed and what was the total sum of the orders?
+-- example: e.g., "12pm has 12345 orders totaling $86753"
+SELECT EXTRACT(hour from time) as timeoforder, count(orderID) as order_count, sum(cost) as total from orders where 
+EXTRACT(hour from time) = 12 group by EXTRACT(hour from time);
+
+-- Special Query #3: "Peak Sales Day"
+-- pseudocode: select top 10 sums of order total grouped by day in descending order by order total
+-- about: given a specific day, what was the sum of the top 10 order totals?
+-- example: "30 August has $12345 of top sales"
+SELECT orders.dateof AS order_day, SUM(cost) AS total_sales
+FROM orders
+GROUP BY order_day
+ORDER BY total_sales DESC
+LIMIT 10;
+
+-- Special Query #4: "Menu Item Inventory"
+-- pseudocode: select count of inventory items from inventory and menu grouped by menu item
+-- about: given a specific menu item, how many items from the inventory does that menu item use?
+-- example: "chicken fingers uses 12 items"
+SELECT menu.name, mi.menuitemid, COUNT(mi.inventoryitemid) AS ingredient_count
+FROM menuitemingredients mi
+JOIN menuitem menu ON menu.menuitemid = mi.menuitemid
+GROUP BY menu.name, mi.menuitemid; 
+
+-- Regular Query #1: "Find Premium Items"
+-- pseudocode: select all premium menu items
+SELECT name FROM menuitem WHERE price=1.50;
+
+-- Regular Query #2: "Find Appetizers"
+-- pseudocode: select all appetizers in menu
+SELECT name FROM menuitem WHERE price=2.00;
+
+-- Regular Query #3: "Find 5 inventory items with least quantity"
+-- Pseudocode: select 5 inventory items with the least inventory
+SELECT name, quantity
+FROM inventoryitem
+ORDER BY quantity ASC
+LIMIT 5;
+
+-- Regular Query #4: "Find large orders"
+-- Pseudocode: select all orders where cost is over $60
+SELECT * FROM orders WHERE cost > 60
+
+-- Regular Query #5: "Find orders with drinks"
+-- Pseudocode: Select orders that have drink in comboList attribute 
+SELECT * 
+FROM orders 
+WHERE comboList LIKE '%Drink%';
+
+-- Regular Query #6: "Find orders with appetizers"
+-- Pseudocode: Select orders that have appetizer in comboList attribute 
+SELECT * 
+FROM orders 
+WHERE comboList LIKE '%Appetizer%';
+
+-- Regular Query #7: "Find inventory items used in an order"
+SELECT 
+    i.name AS inventory_item_name,
+    COUNT(i.inventoryitemid) AS count_needed
+FROM 
+    orders o
+JOIN 
+    UNNEST(STRING_TO_ARRAY(o.menuitem, ', ')) AS menu_item_name 
+    ON o.orderid = 1
+JOIN 
+    menuitem m ON m.name = menu_item_name 
+JOIN 
+    menuitemingredients mi ON m.menuitemid = mi.menuitemid 
+JOIN 
+    inventoryitem i ON mi.inventoryitemid = i.inventoryitemid 
+GROUP BY 
+    i.inventoryitemid, i.name;
+
+-- Regular Query #8: "How much did a certain employee work in the year"
+SELECT 
+    e.name,
+    SUM(t.timeClockedOut - t.timeClockedIn) AS total_time_worked
+FROM 
+    employee e
+JOIN 
+    timesheets t ON e.employeeId = t.cashierId
+GROUP BY 
+    e.employeeId, e.name;
+
+-- Regular Query #9: "Stock remaining of a certain inventory item"
+SELECT name, quantity
+FROM inventoryitem
+WHERE name = 'Chicken'
+
+-- Regular Query #10: "Check to see if an employee is a manager"
+-- Pseudocode: select ismanager from employees where the name is a given name
+SELECT name, ismanager 
+FROM employee 
+WHERE name = 'Professor';
+
+-- Regular Query #11: "List all employees who worked on a holiday"
+-- Pseudocode : list all employee who worked on christmas and their clockin/clock out time
+SELECT name, cashierid, timeClockedIn, timeClockedOut
+FROM timesheets
+JOIN employee
+ON cashierid = employeeid
+WHERE dateof = '2023-12-25';
