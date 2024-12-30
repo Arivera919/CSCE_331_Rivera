@@ -1,0 +1,66 @@
+.cashier-header {
+    background-color: red;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    display: flex;
+}
+
+.cashier-header h1 {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.cashier-container {
+    display: flex;
+}
+
+.cashier-order {
+    width: 30%;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.cashier-order h2 {
+    margin-top: 0;
+}
+
+.cashier-menu {
+    width: 70%;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+}
+
+.cashier-combos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.cashier-combo-button {
+    padding: 10px;
+    background-color: red;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cashier-menu-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.cashier-menu-button {
+    padding: 10px;
+    background-color: lightgray;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.indented-item {
+    margin-left: 20px;
+    list-style-type: circle;
+}

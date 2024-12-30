@@ -1,0 +1,95 @@
+.header {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    min-height: 120px;
+    align-items: center;
+}
+
+.header h1 {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.left {
+    display:flex;
+}
+
+.navi-buttons {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    margin-top: 5px;
+}
+
+.navi-buttons button {
+    margin-right: 20px;
+    height: 70px;
+    width: 90px;
+}
+
+.back-button {
+    height: 70px;
+    width: 90px;
+    margin-left: 20px;
+    margin-top: 40px;   
+}
+
+.logo {
+    min-width: 100px;
+    min-height: 100px;
+    padding-top: 10px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.cart-container h3 {
+    width: 75px;
+    margin-top: 20px;
+}
+
+.remove-button {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.zoom-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 1rem;
+    margin-right: 30px;
+  }
+  
+  .zoom-button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .zoom-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .zoom-level {
+    font-size: 1.2em;
+    color: white;
+    margin-right: 20px;
+  }
+
+  #checkout-button {
+    height: 70px;
+  }
