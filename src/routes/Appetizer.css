@@ -1,0 +1,56 @@
+.app-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 225px 225px 225px 225px; 
+    grid-template-rows: 225px 225px;
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-button {
+    width: 225px;
+    height: 225px;
+    border-radius: 225px;
+}
+
+.combo-header {
+    margin-left: 100px;
+}
+
+.app-list {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    overflow-x: scroll;
+}
+
+.selected {
+    border: solid red 3px;
+}
+
+.footer-display {
+    display: flex;
+    flex-direction: row;
+}
+
+.confirm-button {
+    height: 75%;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.selectedApp-display {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(236, 80, 80);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: solid white 3px;
+    width: fit-content;
+}
