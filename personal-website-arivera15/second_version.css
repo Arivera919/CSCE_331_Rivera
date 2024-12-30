@@ -1,0 +1,422 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: #3A7D44;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 6;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar button {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 100%;
+    height: 70px;
+    padding-left: 40px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    color: white;
+    background-color: #3A7D44;
+    font-weight: bold;
+    font-size: 20px;
+    border: 5px solid #71bb7c;
+
+}
+
+.sidebar button:hover {
+    background-color: #71bb7c;
+    cursor: pointer;
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3A7D44;
+    position: fixed;
+    overflow: hidden;
+}
+
+.ai-footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3A7D44;
+    overflow: hidden;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-right: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 220px;
+    float: left;
+}
+
+.links2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    float: left;
+}
+
+.links a {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+}
+
+.page-links {
+    color: #f3d22b;
+}
+
+.contact-info p {
+    color: white;
+    font-weight: bold;
+}
+
+.resume-header {
+    display: flex;
+    flex-direction: row;
+    margin-left: 410px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.resume-header button {
+    margin-left: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3A7D44;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    width: 110px;
+}
+
+.resume-header button:hover {
+    background-color: #71bb7c;
+    cursor: pointer;
+}
+
+.pdf {
+    display: none;
+}
+
+.show {
+    display: block;
+    max-width: 600px;
+    max-height: 700px;
+    box-shadow: 2px 3px 3px 2px rgb(83, 83, 83);
+    margin-left: 310px;
+}
+
+.droplist {
+    display: none;
+    position: relative;
+}
+
+.dropbutton:hover, .port-dropbutton:hover {
+    cursor: pointer;
+}
+
+.showlist {
+    display: block;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.colon {
+    display: none;
+}
+
+.qual-dropdown {
+    margin-left: 220px;
+}
+
+#interest {
+    padding-right: 100px;
+}
+
+.main-body {
+    padding-left: 220px;
+    padding-bottom: 120px;
+}
+
+.main-body p, li {
+    font-size: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    background-color: #3A7D44;
+    border: 5px solid #f3d22b;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 200px;
+    width: 60%;
+}
+
+.profile img {
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 250px;
+    min-height: 250px;
+    overflow: hidden;
+    display: block;
+    border: 3px solid white;
+    object-fit: cover;
+
+}
+
+.profile-stats {
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.profile p {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.main-content {
+    margin-left: 100px;
+    padding-right: 40px;
+}
+
+.pic1, .pic2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.pic2 {
+    margin-top: 10px;
+}
+
+.pic1 img, .pic2 img {
+    max-width: 150px;
+    min-width: 150px;
+    max-height: 150px;
+    min-height: 150px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#flag {
+    max-width: 200px;
+    min-width: 200px;
+    object-fit: contain;
+}
+
+#connect4, #ipc, #logo {
+    display: none;
+}
+
+.pic1 img {
+    margin-left: 15px;
+}
+
+.pic2 img {
+    margin-right: 15px;
+}
+
+.header2 {
+    width: 100%;
+    background-color: #3A7D44;
+    overflow: hidden;
+}
+
+.header2 h1 {
+    float: left;
+    color: white;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.header2-buttons {
+    float: right;
+}
+
+.header2 button {
+    border: 5px solid #71bb7c;
+    width: max-content;
+    height: 62px;
+    padding: 10px;
+    margin-top: 23px;
+    color: white;
+    background-color: #3A7D44;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header2 button:hover {
+    background-color: #71bb7c;
+    cursor: pointer;
+}
+
+.port-dropbutton {
+    height: 200px;
+    width: 300px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    margin-right: 25px;
+}
+
+.port-dropdown {
+    display: flex;
+    flex-direction: row;
+}
+
+.port-dropbutton h2, .port-dropbutton h3 {
+    background-color: rgba(255, 255, 255, 0.767);
+    width: max-content;
+    margin-left: 60px;
+}
+
+.port-show {
+    display: block;
+    padding-right: 20px;
+}
+
+#port-dropC4 {
+    background-image: url(images/connect4.png);
+}
+
+#port-dropIPC {
+    background-image: url(images/ipc.jpeg);
+}
+
+#port-dropTeamup {
+    background-image: url(images/teamup-logo.png);
+}
+
+.service {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.service h1 {
+    margin-left: 130px;
+}
+
+.line {
+    background-color: black;
+    height: 3px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    animation: moveAround 10s linear infinite;
+}
+
+.box1 {
+    background-color: black;
+    animation-duration: 9s;
+}
+
+.box2 {
+    background-color: black;
+    animation-duration: 11s;
+}
+
+.ai-prompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #3A7D44;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ai-prompt p {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.ai-prompt h2 {
+    color: white;
+    text-decoration: underline;
+}
+
+@keyframes moveAround {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc(100% - 50px);
+    }
+    50% {
+        top: calc(100% - 50px);
+        left: calc(100% - 50px);
+    }
+    75% {
+        top: calc(100% - 50px);
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}

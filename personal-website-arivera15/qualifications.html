@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Rivera's Personal Website</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="first_version.css" id="curStyleSheet"/>
+    <script src="toggle.js"></script>
+  </head>
+
+  <body>
+    <div class="header sidebar">
+      <h1>Abdiel Rivera</h1>
+      <div class="header-buttons">
+        <a href="index.html"><button>Home</button></a>
+        <a href="portfolio.html"><button>Portfolio</button></a>
+        <a href="qualifications.html"><button>Qualifications</button></a>
+        <a href="service.html"><button>Service</button></a>
+        <a href="ai.html"><button>Power of AI</button></a>
+        <button onclick="toggle()">Style Toggle</button>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="qualifications">
+        <div class="resume-header">
+          <h2>My Resume:</h2>
+          <button class="resume-button" onclick="openResume()" id="closer">Open Me</button>
+        </div>
+        <img src="images/Rivera_Abdiel.jpg" alt="Abdiel's Resume" id="resume" class="pdf">
+        <div class="qual-dropdown">
+          <h2 class="dropbutton" onclick="dropclass()"><i id="arrow1" class="arrow right"></i>Relevant Classwork<span class="colon">:</span></h2>
+          <ul id="classwork" class="droplist">
+            <li>Data Structures and Algorithms</li>
+            <li>Introduction to Computer Systems</li>
+            <li>Programming Languages</li>
+            <li>Foundation of Software Engineering</li>
+            <li>Microcomputer Systems</li>
+          </ul>
+        </div>
+        <div class="qual-dropdown">
+          <h2 class="dropbutton" onclick="dropskill()"><i id="arrow2" class="arrow right"></i>Technical Skills<span class="colon">:</span></h2>
+          <ul id="skills" class="droplist">
+            <li>Programming: C++, HTML, CSS, JavaScript, Java, Svelte</li>
+            <li>Languages: English, Spanish</li>
+          </ul>
+        </div>
+        <div class="qual-dropdown">
+          <h2 class="dropbutton" onclick="dropinterest()"><i id="arrow3" class="arrow right"></i>My Areas of Interest<span class="colon">:</span></h2>
+          <p id="interest" class="droplist">
+            My main areas of interest are software development, web development, and robotics. 
+            Ever since <a href="https://amschool.org/" class="page-links" target="_blank">high school</a> when I joined the robotics team I realized that I really enjoy 
+            working with both hardware and software. Being able to design a machine to accomplish a 
+            specific task and then writing the code to make them able to do that task is a process that 
+            feels really satisfying to achieve. Of course, after becoming more familiar with programming, 
+            things like software development and web development also caught my attention for similar reasons.
+            Being able to tangibly see the effect your work is having on a project is why I find these areas so 
+            interesting.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="links">
+        <a href="https://github.com/Arivera919" target="_blank">My Github</a>
+        <a href="https://www.linkedin.com/in/abdiel-rivera-569764209/"  target="_blank">My Linkedin</a>
+      </div>
+      <div class="contact-info">
+        <p>Phone: +1 (281) 323 - 8406</p>
+        <p>Email: arivera15@tamu.edu</p>
+      </div>
+    </div>
+  </body>
+</html>

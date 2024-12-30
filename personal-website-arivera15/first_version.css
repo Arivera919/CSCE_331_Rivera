@@ -1,0 +1,366 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: darkblue;
+    overflow: hidden;
+}
+
+.header h1 {
+    float: left;
+    color: white;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.header-buttons {
+    float: right;
+}
+
+.header button {
+    border: 5px solid rgb(51, 51, 228);
+    width: max-content;
+    height: 62px;
+    padding: 10px;
+    margin-top: 23px;
+    color: white;
+    background-color: darkblue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header button:hover {
+    background-color: rgb(51, 51, 228);
+    cursor: pointer;
+}
+
+.main-body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-body p, li{
+    font-size: 20px;
+}
+
+.main-content {
+    padding-right: 20px;
+}
+
+.side-column {
+    min-width: 30%;
+    padding-top: 20px;
+}
+
+.profile {
+    background-color: darkblue;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold;
+    border: 5px solid black;
+}
+
+.profile p {
+    color: white;
+    padding: 10px 5px 10px 5px;
+    margin-left: 15%;
+}
+
+.profile img {
+    max-width: calc(100% - 5px);
+    min-width: calc(100% - 5px);
+    max-height: 350px;
+    min-height: 350px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 10px;
+    border: 3px solid white;
+    object-fit: cover;
+
+}
+
+.p1, .p2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.p2 {
+    margin-top: 10px;
+}
+
+.p1 img, .p2 img {
+    max-width: 150px;
+    min-width: 150px;
+    max-height: 150px;
+    min-height: 150px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#connect4, #ipc, #flag {
+    max-width: 200px;
+    min-width: 200px;
+    object-fit: contain;
+}
+
+.p1 img {
+    margin-left: 15px;
+}
+
+.p2 img {
+    margin-right: 15px;
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: darkblue;
+    overflow: hidden;
+}
+
+.ai-footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: darkblue;
+    overflow: hidden;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-right: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    float: left;
+}
+
+.links a {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+}
+
+.page-links {
+    color: #6dce9d;
+}
+
+.contact-info p {
+    color: white;
+    font-weight: bold;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 20%;
+    margin-bottom: 10px;
+}
+
+.line, .example {
+    display: none;
+}
+
+.port1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-header h2 {
+    float: left;
+}
+
+.project-header h3 {
+    float: right;
+    margin-top: 25px;
+}
+
+.pdf {
+    display: none;
+}
+
+.show {
+    display: block;
+    max-width: 600px;
+    max-height: 700px;
+    box-shadow: 2px 3px 3px 2px rgb(83, 83, 83);
+}
+
+.qualifications {
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-header {
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.resume-header button {
+    margin-left: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    width: 110px;
+}
+
+.resume-header button:hover {
+    background-color: rgb(51, 51, 228);
+    cursor: pointer;
+}
+
+.service {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    animation: moveAround 10s linear infinite;
+}
+
+.box1 {
+    background-color: black;
+    animation-duration: 9s;
+}
+
+.box2 {
+    background-color: black;
+    animation-duration: 11s;
+}
+
+.ai-prompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: darkblue;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ai-prompt p {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.ai-prompt h2 {
+    color: white;
+    text-decoration: underline;
+}
+
+@keyframes moveAround {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc(100% - 50px);
+    }
+    50% {
+        top: calc(100% - 50px);
+        left: calc(100% - 50px);
+    }
+    75% {
+        top: calc(100% - 50px);
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    
+    .header h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .header button {
+        width: max-content;
+        font-size: 15px;
+        height: 57px;
+        margin-top: 15px;
+    }
+
+    .profile {
+        padding-top: 0;
+    }
+
+    .profile p {
+        margin-left: 7%;
+    }
+
+    .profile img {
+        width: 100%;
+        min-width: 100%;
+        margin-left: 0;
+        border: none;
+    }
+
+    .p1 img {
+        margin-top: 10px;
+    }
+
+    .p2 img {
+        margin-top: 25px;
+    }
+
+    .portfolio, .service {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .resume-header {
+        margin-left: 50px;
+    }
+
+    .show {
+        width: 400;
+    }
+
+    .resume-header button {
+        margin-top: 15px;
+    }
+
+}

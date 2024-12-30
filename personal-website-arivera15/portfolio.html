@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Rivera's Personal Website</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="first_version.css" id="curStyleSheet" />
+    <script src="toggle.js"></script>
+  </head>
+
+  <body>
+    <div class="header sidebar">
+      <h1>Abdiel Rivera</h1>
+      <div class="header-buttons">
+        <a href="index.html"><button>Home</button></a>
+        <a href="portfolio.html"><button>Portfolio</button></a>
+        <a href="qualifications.html"><button>Qualifications</button></a>
+        <a href="service.html"><button>Service</button></a>
+        <a href="ai.html"><button>Power of AI</button></a>
+        <button onclick="toggle()">Style Toggle</button>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="portfolio">
+        <h1>What I've Worked on so Far:</h1>
+        <div class="port1 port-dropdown">
+          <div
+            class="project-header port-dropbutton"
+            id="port-dropC4"
+            onclick="portDrop1()"
+          >
+            <h2>Connect 4 in Java</h2>
+            <h3>Nov 2023 - Dec 2023</h3>
+          </div>
+          <div class="p1 droplist" id="c4">
+            <p>
+              As the
+              <a
+                href="https://github.com/Arivera919/CSCE-314-Final-Project"
+                class="page-links"
+                target="_blank"
+              >
+                final project
+              </a>
+              for the class Programming Languages which I took during the Fall
+              2023 semester, I was tasked with recreating the game
+              <a
+                href="https://www.unco.edu/hewit/pdf/giant-map/connect-4-instructions.pdf"
+                class="page-links"
+                target="_blank"
+                >Connect 4</a
+              >
+              in Java using Java FX. Some notable features of this version of
+              Connect 4 are the AI opponent whose difficulty can be toggled via
+              the menu, a save and load feature, and a log that tracks the most
+              recent move made. The demo video can be found
+              <a
+                href="https://youtu.be/uQ-QPlKIU5U"
+                class="page-links"
+                target="_blank"
+                >here.</a
+              >
+            </p>
+            <img src="images/connect4.png" alt="Connect 4" id="connect4" />
+            <!--"connect fours #3885365". Clipart Library, 2016, https://clipart-library.com/clipart/connect-four-cliparts-5.htm. Accessed 10 September 2024.-->
+          </div>
+        </div>
+        <div class="port1 port-dropdown">
+          <div
+            class="project-header port-dropbutton"
+            id="port-dropIPC"
+            onclick="portDrop2()"
+          >
+            <h2>CSCE 313</h2>
+            <h3>Jan 2024 - Apr 2024</h3>
+          </div>
+          <div class="p1 droplist" id="Inter">
+            <p>
+              During my Spring 2024 semester I took the class "Introduction to
+              Computer Systems." In this class, the majority of our assigments
+              were in C++ over the course of the semester we covered
+              <a
+                href="https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+                class="page-links"
+                target="_blank"
+                >concepts</a
+              >
+              such as inter-process communication, threading, and concurrency to
+              name a few. Being such a hands-on class, there were several
+              <a
+                href="https://github.com/Arivera919/CSCE-313-Assignments"
+                class="page-links"
+                target="_blank"
+              >
+                programming assignments
+              </a>
+              that required us to apply these concepts in several ways to help
+              us gain a better understanding of them.
+            </p>
+            <img
+              src="images/ipc.jpeg"
+              alt="Inter-Process Communication"
+              id="ipc"
+            />
+            <!--"Decide between In-Process or Inter-Process Communication at Deploy Time". Code Design, January 23, 2018, https://oncodedesign.com/decide-between-in-process-or-inter-process-communication-at-deploy-time/. Accessed 10 September 2024.-->
+          </div>
+        </div>
+        <div class="port1 port-dropdown">
+          <div
+            class="project-header port-dropbutton"
+            id="port-dropTeamup"
+            onclick="portDrop3()"
+          >
+            <h2>ReadWell App</h2>
+            <h3>May 2024 - Aug 2024</h3>
+          </div>
+          <div class="p1 droplist" id="Team">
+            <p>
+              Over the course of the summer, I worked together with a team of
+              other students to create a learning app called
+              <a
+                href="https://teamup.org/apps/readwell/"
+                class="page-links"
+                target="_blank"
+              >
+                ReadWell.
+              </a>
+              Similar to Canvas and other such learning sites, teachers would be
+              able to assign homework to their students and view their progress
+              in the form of a report. My main focus for the duration of the
+              project was developing the frontend for the teacher view of the
+              app.
+            </p>
+            <img src="images/teamup-logo.png" alt="Teamup logo" id="logo"/>
+            <!--"Teamup Logo". Teamup, 2024, https://teamup.org/. Accessed 10 September 2024-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="links">
+        <a href="https://github.com/Arivera919" target="_blank">My Github</a>
+        <a
+          href="https://www.linkedin.com/in/abdiel-rivera-569764209/"
+          target="_blank"
+          >My Linkedin</a
+        >
+      </div>
+      <div class="contact-info">
+        <p>Phone: +1 (281) 323 - 8406</p>
+        <p>Email: arivera15@tamu.edu</p>
+      </div>
+    </div>
+  </body>
+</html>
